@@ -1,0 +1,82 @@
+{
+    "quizes" : [
+        {
+            "title" : "Random",
+            "questions" : [
+                {
+                    "id" : 1,
+                    "question": "What country has the highest life expectancy?",
+                    "answers": ["Hong Kong", "Japan", "Switzerland", "Australia"]
+                  },
+                  {
+                    "id" : 2,
+                    "question": "Where would you be if you were standing on the Spanish Steps?",
+                    "answers": ["Rome", "Paris", "London", "New York"]
+                  },
+                  {
+                    "id" : 3,
+                    "question": "Which language has the more native speakers: English or Spanish?",
+                    "answers": ["Spanish", "English", "Mandarin", "Hindi"]
+                  },
+                  {
+                    "id" : 4,
+                    "question": "What is the most common surname in the United States?",
+                    "answers": ["Smith", "Johnson", "Williams", "Brown"]
+                  },
+                  {
+                    "id" : 5,
+                    "question": "What disease commonly spread on pirate ships?",
+                    "answers": ["Scurvy", "Malaria", "Cholera", "Typhoid"]
+                  },
+                  {
+                    "id" : 6,
+                    "question": "Who was the Ancient Greek God of the Sun?",
+                    "answers": ["Apollo", "Zeus", "Hades", "Poseidon"]
+                  },
+                  {
+                    "id" : 7,
+                    "question": "What was the name of the crime boss who was head of the feared Chicago Outfit?",
+                    "answers": ["Al Capone", "John Gotti", "Lucky Luciano", "Meyer Lansky"]
+                  },
+                  {
+                    "id" : 8,
+                    "question": "What year was the United Nations established?",
+                    "answers": ["1945", "1919", "1939", "1955"]
+                  },
+                  {
+                    "id" : 9,
+                    "question": "Who has won the most total Academy Awards?",
+                    "answers": ["Walt Disney", "Katharine Hepburn", "Steven Spielberg", "Meryl Streep"]
+                  },
+                  {
+                    "question": "What artist has the most streams on Spotify?",
+                    "answers": ["Drake", "Ed Sheeran", "Justin Bieber", "Ariana Grande"]
+                  },
+                  {
+                    "question": "How many minutes are in a full week?",
+                    "answers": ["10,080", "5,040", "7,200", "12,960"]
+                  },
+                  {
+                    "question": "What car manufacturer had the highest revenue in 2020?",
+                    "answers": ["Volkswagen", "Toyota", "General Motors", "Hyundai"]
+                  },
+                  {
+                    "question": "How many elements are in the periodic table?",
+                    "answers": ["118", "92", "104", "137"]
+                  },
+                  {
+                    "question": "What company was originally called 'Cadabra'?",
+                    "answers": ["Amazon", "Google", "Apple", "Microsoft"]
+                  },
+                  {
+                    "question": "How many faces does a Dodecahedron have?",
+                    "answers": ["12", "6", "8", "20"]
+                  },
+                  {
+                    "question": "Queen guitarist Brian May is also an expert in what scientific field?",
+                    "answers": ["Astrophysics", "Genetics", "Chemistry", "Geology"]
+                  }
+            ]
+        }
+    ]
+}

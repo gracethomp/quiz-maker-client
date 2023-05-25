@@ -1,6 +1,6 @@
 import React, { useState }  from 'react';
-import Answer from './answer';
-import trash from '../trash.png';
+import Answer from './answer-maker';
+import trash from './trash.png';
 
 function QuestionMaker({onDelete}) {
     const [question, setQuestion] = useState('');

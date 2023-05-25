@@ -9,8 +9,8 @@ function Answer({onDelete}) {
 
     return (
         <div class="answer">
-            <input type="checkbox" disabled id="roundCheckbox" class="answer disabled-checkbox"/>
-            <label for="roundCheckbox" class="answer"></label>
+            <input type="checkbox" id="roundCheckbox"/>
+            <label for="roundCheckbox"></label>
             <input type="text" id="answer1" value={answer} class="answer field" placeholder="Enter answer choice" required onChange={handleAnswerChange}/>
             <div class="callout" data-closable>
                 <button class="closing-button" role='button' onClick={onDelete}>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import QuestionMaker from '../components/question-maker';
+import QuestionMaker from '../components/maker/question-maker';
 import plus from './plus.png'
 
 function QuizMaker() {
@@ -15,10 +15,15 @@ function QuizMaker() {
         setQuestions(components => components.filter(component => component.id !== index))
     }
 
+    const handleQuizTitle = (title) => {
+        setTitle(title.target.value);
+    }
+
     return (
+        <>
         <div class='creator'>
             <div class='form'>
-                <input type="text" class="title field" value={title} placeholder="Quiz title" required/>
+                <input type="text" class="title field" value={title} placeholder="Quiz title" required onChange={handleQuizTitle}/>
             </div>
             {questions.map(question => (
                 <div key={question.id}>
@@ -31,6 +36,7 @@ function QuizMaker() {
                 </button>
             </div>
         </div>
+        </>
     );
 }
 
