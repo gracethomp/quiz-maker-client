@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 const Question= ({answers, title}) => {
-
-
-
     return (
-        <div class='creator'>
+        <>
             <div class='form'>
                 <div class="question">
                     <p class>{title}</p>
@@ -21,7 +18,7 @@ const Question= ({answers, title}) => {
                 ))}
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

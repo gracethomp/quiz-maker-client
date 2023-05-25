@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import QuestionMaker from '../components/maker/question-maker';
+import NavigationButton from '../components/navigation-buttons';
 import plus from './plus.png'
 
 function QuizMaker() {
@@ -35,6 +36,7 @@ function QuizMaker() {
                     <img class='plus-img' src={plus}/>
                 </button>
             </div>
+            <NavigationButton visible={questions.length >= 1}/>
         </div>
         </>
     );

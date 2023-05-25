@@ -19,6 +19,7 @@ code {
   position: relative;
   margin: auto;
   width: 770px;
+  margin-bottom: 100px;
 }
 
 .form {
@@ -36,8 +37,34 @@ code {
   box-sizing: border-box;
 }
 
+.form.access{
+  width: 550px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  padding: 0;
+}
+
 div {
   display: block;
+}
+
+.header {
+  background-color: rgb(103, 58, 183);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+}
+
+.header-text{
+  margin: 0;
+  padding: 0 25px;
+  font-size: 16pt;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
 
 input:focus {
@@ -57,6 +84,20 @@ input:focus {
   box-sizing: border-box;
   padding: 19px;
   font-size: 16pt;
+}
+
+.access-form {
+  padding: 24px;
+  padding-bottom: 0;
+}
+
+input.quiz-slag {
+  background-color: #eaeaea;
+  border-radius: 10px;
+  width: 100%;
+  height: 34px;
+  font-size: 13pt;
+  text-align: center;
 }
 
 div.question {
@@ -210,4 +251,84 @@ input[type="checkbox"]:checked + label {
 
 .remove-question-button:hover {
   filter: brightness(90%);
+}
+
+.access-button {
+  background-color:  rgb(103, 58, 183);
+  text-align: center;
+  width: 20%;
+  padding: 10px;
+  height: 20%;
+  cursor: pointer;
+}
+
+.access-button:hover {
+  background-color:  rgb(143, 106, 210);
+}
+
+.create-quiz-button {
+  background-color:  rgb(166, 147, 199);
+  text-align: center;
+  width: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+.create-quiz-button:hover {
+  background-color:  rgb(206, 195, 226);
+}
+
+.send-button {
+  background-color:  rgb(103, 58, 183);
+  text-align: center;
+  width: 20%;
+  padding: 20px;
+}
+
+.send-button-creation {
+  background-color:  rgb(103, 58, 183);
+  text-align: center;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.cancel-button-navigation {
+  background-color:  rgb(255, 255, 255);
+  text-align: center;
+  margin-left: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.cancel-button-navigation:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.access-text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.send-text {
+  display: inline-block;
+  color: #ffffff;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  margin: 0;
+}
+
+.cancel-text {
+  display: inline-block;
+  color: #000000;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  margin: 0;
+}
+
+.creation-buttons {
+  display: flex;
 }

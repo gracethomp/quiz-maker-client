@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import Question from '../components/visitor/question';
-import axios from 'axios';
+import NavigationButton from '../components/navigation-buttons';
 
 function QuizVisitor() {
     const [quizes, setQuizes] = useState([]);
@@ -18,14 +18,19 @@ function QuizVisitor() {
 
   return (
     <>
-    {quizes.map((post) =>(
-        <>
-            <p>{post.title}</p>
-            {post.questions.map((question) =>(
-                <Question title={question.question} answers={question.answers} />
-            ))}
-        </>
-    ))}
+    <div class='creator'>
+        {quizes.map((post) =>(
+            <>
+                <div class='form'>
+                    <p class='title field'>{post.title}</p>
+                </div>
+                {post.questions.map((question) =>(
+                    <Question title={question.question} answers={question.answers} />
+                ))}
+            </>
+        ))}
+        <NavigationButton visible={true}/>
+    </div>
     </>
   );
 };

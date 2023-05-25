@@ -27,10 +27,10 @@ function QuestionMaker({onDelete}) {
     };
 
     return (
-        <div class="form" onClick={handleDivClick}>
+        <div class="form">
             <div class="question">
                 <input type="text" id="question1" class="question field" value={question} placeholder="Enter your question" required onChange={handleQuestionChange}/>
-                <div class="underline"></div>
+                <div class="underline"/>
             </div>
             <div class="answers">
                 {answers.map((component) => (
@@ -42,13 +42,11 @@ function QuestionMaker({onDelete}) {
                     <button class="button-2" role="button" onClick={addAnswer}>+</button>
                 )}
             </div>
-            {isDivClicked &&
-                <div class="remove-question">
-                    <button class="remove-question-button" onClick={onDelete}>
-                        <img class='trash' src={trash}/>
-                    </button>
-                </div>
-            }
+            <div class="remove-question">
+                <button class="remove-question-button" onClick={onDelete}>
+                    <img class='trash' src={trash}/>
+                </button>
+            </div>
         </div>
     );
 }
