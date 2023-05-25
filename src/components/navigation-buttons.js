@@ -5,7 +5,6 @@ const NavigationButton=({visible}) => {
     const navigate = useNavigate();
 
     const navigateToMain = () => {
-      // Redirect to another page
       navigate('/');
     };
     return (

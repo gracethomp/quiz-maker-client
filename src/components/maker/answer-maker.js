@@ -5,7 +5,7 @@ function Answer({onDelete}) {
 
     const handleAnswerChange = (e) => {
         setAnswer(e.target.value);
-      };
+    };
 
     return (
         <div class="answer">

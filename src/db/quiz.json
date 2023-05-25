@@ -1,7 +1,7 @@
 {
   "quizes": [
     {
-      "quiz-slug": "random-general-quiz",
+      "id": "random-general-quiz",
       "title": "Random General Quiz!",
       "questions": [
         {
@@ -160,5 +160,13 @@
       ]
     }
   ],
-  "posts": []
+  "results": [
+    {
+      "ip": "127.0.0.1",
+      "result" : "100"
+    }, {
+      "ip": "127.0.0.1",
+      "result" : "97"
+    }
+  ]
 }
