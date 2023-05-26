@@ -6,15 +6,29 @@ import NavigationButton from '../components/navigation-buttons';
 function QuizVisitor() {
   const { slug } = useParams()
   const [quizes, setQuizes] = useState([]);
+  const [formData, setFormData] = useState({
+    ip: '',
+    result: '100'
+  });
 
   const getData = () => {
     fetch("http://localhost:5000/quizes")
       .then((response) => response.json())
       .then((result) => {
-        setQuizes(result)
+        setQuizes(result);
+        setFormData({ ...formData, ip: result.ip});
       })
-      .catch((error) => console.log("error", error));
   };
+
+  const handleSubmit = () => {
+    fetch('http://localhost:5000/results', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        })
+  }
 
   useEffect(() => {
     getData();
@@ -36,7 +50,7 @@ function QuizVisitor() {
             }
           </>
         ))}
-        <NavigationButton visible={true}/>
+        <NavigationButton visible={true} handleSubmit={handleSubmit}/>
     </div>
   );
 };

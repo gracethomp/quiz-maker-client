@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="form access"
+  >
+    <div
+      class="header"
+    >
+      <p
+        class="header-text"
+      >
+        quizmaker.com
+      </p>
+    </div>
+    <div
+      class="access-form"
+    >
+      <input
+        class="field quiz-slag"
+        placeholder="Put quiz-slug here"
+        type="text"
+        value=""
+      />
+      <div
+        class="creation-buttons"
+      >
+        <div
+          class="access-button form"
+          role="button"
+        >
+          <span
+            class="send-text"
+          >
+            Go
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="underline"
+    />
+    <div
+      class="creation-buttons"
+    >
+      <div
+        class="create-quiz-button form"
+        role="button"
+      >
+        <span
+          class="send-text"
+        >
+          Create your own quiz
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
