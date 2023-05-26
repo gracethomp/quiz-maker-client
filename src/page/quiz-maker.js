@@ -5,12 +5,12 @@ import plus from '../assets/plus.png'
 
 function QuizMaker() {
     const [mainIndex, setIndex] = useState(0);
-    const [questions, setQuestions] = useState([ ]);
+    const [questions, setQuestions] = useState([]);
     const [formData, setFormData] = useState({
         id: '',
         title: '',
         questions: []
-      });
+    });
 
     const addQuestion = () => {
         const updatedQuestions = [...questions, { id: mainIndex + 1, question: '', answers: [] }];
@@ -19,7 +19,7 @@ function QuizMaker() {
         setFormData((prevFormData) => ({
             ...prevFormData,
             questions: updatedQuestions
-          }));
+        }));
     };
 
     const deleteQuestion = (index) => {
@@ -28,9 +28,9 @@ function QuizMaker() {
 
     const handleQuizTitle = (e) => {
         const { value } = e.target;
-            let id = value.toLowerCase();
-            id = id.replace(/\s/g, "-");
-            setFormData({ ...formData, 'title': value, id: id });
+        let id = value.toLowerCase();
+        id = id.replace(/\s/g, "-");
+        setFormData({ ...formData, 'title': value, id: id });
     };
 
     const handleSubmit = (newQuestion) => {
@@ -45,66 +45,55 @@ function QuizMaker() {
         })
     }
 
-    const handleAddQuestions= ()=> {
-        const questions = [...formData.questions, { id: mainIndex, name: '', category: '' }];
-        setFormData({ ...formData, questions });
-        setIndex(mainIndex + 1);
-    };
-    
     const handleQuestionsChange = (index, e) => {
         const updatedQuestions = questions.map((question) => {
             if (question.id === index) {
-              return { ...question, question: e.target.value};
+                return { ...question, question: e.target.value };
             }
             return question;
-          });
-        
-          setQuestions(updatedQuestions);
-          setFormData((prevFormData) => ({
+        });
+
+        setQuestions(updatedQuestions);
+        setFormData((prevFormData) => ({
             ...prevFormData,
             questions: updatedQuestions,
-          }));
+        }));
     };
 
-    const handleAnswers= (newAnswers, index) => {
+    const handleAnswers = (newAnswers, index) => {
         const updatedQuestions = questions.map((question) => {
             if (question.id === index) {
-              return { ...question, answers: newAnswers};
+                return { ...question, answers: newAnswers };
             }
             return question;
-          });
-        
-          setQuestions(updatedQuestions);
-          setFormData((prevFormData) => ({
+        });
+
+        setQuestions(updatedQuestions);
+        setFormData((prevFormData) => ({
             ...prevFormData,
             questions: updatedQuestions,
-          }));
+        }));
 
     }
 
-    const handleRemoveQuestions = (index) => {
-        const questions = formData.questions.filter(e => e.id !== index);
-        setFormData({ ...formData, questions });
-    };
-
     return (
         <>
-        <div class='creator'>
-            <div class='form'>
-                <input type="text" class="title field" value={formData.title} placeholder="Quiz title" required onChange={handleQuizTitle}/>
-            </div>
-            {questions.map(question => (
-                <div key={question.id}>
-                    <QuestionMaker mainIndex={mainIndex} question1={question} onDelete={() => deleteQuestion(question.id)} handleQuestionChange={(e)=> handleQuestionsChange(question.id, e)} handleAnswers={handleAnswers}/>
+            <div class='creator'>
+                <div class='round-shadow-box-form form'>
+                    <input type="text" class="title field" value={formData.title} placeholder="Quiz title" required onChange={handleQuizTitle} />
                 </div>
-            ))}
-            <div class='plus-question'>
-                <button onClick={addQuestion} class='button-plus-question'>
-                    <img class='plus-img' src={plus}/>
-                </button>
+                {questions.map(question => (
+                    <div key={question.id}>
+                        <QuestionMaker mainIndex={mainIndex} question1={question} onDelete={() => deleteQuestion(question.id)} handleQuestionChange={(e) => handleQuestionsChange(question.id, e)} handleAnswers={handleAnswers} />
+                    </div>
+                ))}
+                <div class='plus-question'>
+                    <button onClick={addQuestion} class='button-plus-question'>
+                        <img class='plus-img' src={plus} alt=''/>
+                    </button>
+                </div>
+                <NavigationButton visible={questions.length >= 1 && formData.title !== ''} handleSubmit={handleSubmit} />
             </div>
-            <NavigationButton visible={questions.length >= 1 && formData.title !== ''} handleSubmit={handleSubmit}/>
-        </div>
         </>
     );
 }

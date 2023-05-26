@@ -27,7 +27,7 @@ exports[`matches snapshot 1`] = `
         class="creation-buttons"
       >
         <div
-          class="access-button form"
+          class="access-button "
           role="button"
         >
           <span

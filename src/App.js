@@ -8,13 +8,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/maker" element={<QuizMaker />}/>
-        <Route path="/:slug" element={<QuizVisitor slug1='random-general-quiz'/>}/>
-        <Route path='/' element={<QuizAccess/>}/>
-        <Route path='/results' element={<Result/>}/>
+        <Route path="/maker" element={<QuizMaker />} />
+        <Route path="/:slug" element={<QuizVisitor slug1='random-general-quiz' />} />
+        <Route path='/' element={<QuizAccess />} />
+        <Route path='/:slug/results' element={<Result />} />
       </Routes>
     </BrowserRouter>
   );
 }
-// render={({ match }) => <QuizVisitor slug={match.params.slug}
+
 export default App;

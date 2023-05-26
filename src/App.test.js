@@ -16,18 +16,18 @@ test('answer test', () => {
   const props = {
     question: '???',
     answers: [{
-      'id' : 1,
-      'answer' : 'answer1'
+      'id': 1,
+      'answer': 'answer1'
     }, {
-      'id' : 2,
-      'answer' : 'answer2'
+      'id': 2,
+      'answer': 'answer2'
     }],
   };
   render(<Question {...props} />);
 });
 
 test('handles button click correctly', () => {
-  const { getByText, getByTestId } = render(<App />);
+  const { getByText } = render(<App />);
   const buttonElement = getByText('Go');
   fireEvent.click(buttonElement);
   expect(buttonElement).toBeVisible;

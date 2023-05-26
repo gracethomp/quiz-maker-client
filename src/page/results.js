@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import NavigationButton from '../components/navigation-buttons';
 
 function Result() {
@@ -7,25 +6,19 @@ function Result() {
 
     const getData = () => {
         fetch("http://localhost:5000/results")
-        .then((response) => response.json())
-        .then((result) => setResult(result))
-        .catch((error) => console.log("error", error));
+            .then((response) => response.json())
+            .then((result) => setResult(result))
+            .catch((error) => console.log("error", error));
     };
 
     useEffect(() => {
         getData();
     }, []);
 
-    const navigate = useNavigate();
-
-    const navigateToMain = () => {
-      navigate('/');
-    };
-
     return (
         <div class='creator'>
-            <div class='form'>
-                <table>
+            <div class='round-shadow-box-form form'>
+                <table class='round-shadow-box-form'>
                     <tr>
                         <th>IP</th>
                         <th>Result</th>
@@ -38,7 +31,7 @@ function Result() {
                     ))}
                 </table>
             </div>
-            <NavigationButton visible={false}/>
+            <NavigationButton visible={false} />
         </div>
     )
 }
