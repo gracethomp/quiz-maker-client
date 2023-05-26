@@ -1,16 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const NavigationButton=({visible}) => {
+const NavigationButton=({visible, handleSubmit}) => {
     const navigate = useNavigate();
 
     const navigateToMain = () => {
-      navigate('/');
+        navigate('/');
     };
+
+    const submitData = () => {
+        handleSubmit();
+        navigateToMain();
+    }
+
     return (
         <div class='creation-buttons'>
             {visible && (
-                <div role='button' class='send-button-creation form'>
+                <div role='button' class='send-button-creation form' onClick={submitData}>
                     <span class='send-text'>Send</span>
                 </div>
             )}
