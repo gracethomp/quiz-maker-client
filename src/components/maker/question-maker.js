@@ -2,20 +2,10 @@ import React, { useState }  from 'react';
 import Answer from './answer-maker';
 import trash from './trash.png';
 
-function QuestionMaker({onDelete}) {
-    const [question, setQuestion] = useState('');
+function QuestionMaker({onDelete, question1, handleQuestionChange}) {
     const [answers, setAnswers] = useState([{ id: 1 }]);
-    const [isDivClicked, setIsDivClicked] = useState(false);
-
-    const handleDivClick = () => {
-        setIsDivClicked(true);
-    };
 
     const maxComponents = 5;
-
-    const handleQuestionChange = (e) => {
-        setQuestion(e.target.value);
-    };
 
     const addAnswer = () => {
         const index = answers.length;
@@ -29,7 +19,7 @@ function QuestionMaker({onDelete}) {
     return (
         <div class="form">
             <div class="question">
-                <input type="text" id="question1" class="question field" value={question} placeholder="Enter your question" required onChange={handleQuestionChange}/>
+                <input type="text" id="question1" class="question field" value={question1} placeholder="Enter your question" required onChange={handleQuestionChange}/>
                 <div class="underline"/>
             </div>
             <div class="answers">

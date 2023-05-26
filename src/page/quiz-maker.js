@@ -4,17 +4,22 @@ import NavigationButton from '../components/navigation-buttons';
 import plus from './plus.png'
 
 function QuizMaker() {
+    const [mainIndex, setIndex] = useState(0);
+    const [questions, setQuestions] = useState([ ]);
     const [formData, setFormData] = useState({
         id: '',
         title: '',
-        // questions: []
+        questions: []
       });
-    const [title, setTitle] = useState('');
-    const [questions, setQuestions] = useState([{ id: 1 }]);
 
     const addQuestion = () => {
-        const index = questions.length;
-        setQuestions([...questions, { id: questions.length + 1 }]);
+        const updatedQuestions = [...questions, { id: mainIndex + 1, question: '', answers: [] }];
+        setQuestions(updatedQuestions);
+        setIndex(mainIndex + 1);
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            questions: updatedQuestions
+          }));
     };
 
     const deleteQuestion = (index) => {
@@ -23,13 +28,14 @@ function QuizMaker() {
 
     const handleQuizTitle = (e) => {
         const { value } = e.target;
-            let id = value.toLowerCase(); // Convert the name to lowercase for the id field
+            let id = value.toLowerCase();
             id = id.replace(/\s/g, "-");
             setFormData({ ...formData, 'title': value, id: id });
-            //setFormData({ ...formData, 'title': e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (newQuestion) => {
+        setQuestions([...questions, newQuestion]);
+        setFormData({ ...formData, questions: [...questions, newQuestion] });
         fetch('http://localhost:5000/quizes', {
             method: 'POST',
             headers: {
@@ -37,12 +43,33 @@ function QuizMaker() {
             },
             body: JSON.stringify(formData)
         })
-        .then(response => response.json())
-        .then(data => {
-        // Handle the response from the API
-        console.log(data);
-      })
     }
+
+    const handleAddQuestions= ()=> {
+        const questions = [...formData.questions, { id: mainIndex, name: '', category: '' }];
+        setFormData({ ...formData, questions });
+        setIndex(mainIndex + 1);
+    };
+    
+    const handleQuestionsChange = (index, e) => {
+        const updatedQuestions = questions.map((question) => {
+            if (question.id === index) {
+              return { ...question, question: e.target.value };
+            }
+            return question;
+          });
+        
+          setQuestions(updatedQuestions);
+          setFormData((prevFormData) => ({
+            ...prevFormData,
+            questions: updatedQuestions,
+          }));
+    };
+
+    const handleRemoveQuestions = (index) => {
+        const questions = formData.questions.filter(e => e.id !== index);
+        setFormData({ ...formData, questions });
+    };
 
     return (
         <>
@@ -52,7 +79,11 @@ function QuizMaker() {
             </div>
             {questions.map(question => (
                 <div key={question.id}>
-                    <QuestionMaker onDelete={() => deleteQuestion(question.id)} />
+                    {/* <div class="question">
+                        <input type="text" id="question1" class="question field" value={question.question} placeholder="Enter your question" required onChange={(e) => handleQuestionsChange(question.id, e)}/>
+                        <div class="underline"/>
+                    </div> */}
+                    <QuestionMaker question1={question.question} onDelete={() => deleteQuestion(question.id)} handleQuestionChange={(e)=> handleQuestionsChange(question.id, e)} />
                 </div>
             ))}
             <div class='plus-question'>
@@ -60,7 +91,7 @@ function QuizMaker() {
                     <img class='plus-img' src={plus}/>
                 </button>
             </div>
-            <NavigationButton visible={questions.length >= 1 && formData.title != ''} handleSubmit={handleSubmit}/>
+            <NavigationButton visible={questions.length >= 1 && formData.title !== ''} handleSubmit={handleSubmit}/>
         </div>
         </>
     );
