@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-function Answer({onDelete}) {
-    const [answer, setAnswer] = useState('');
+function Answer({onDelete, answer, handleAnswerChange}) {
+    //const [answer, setAnswer] = useState('');
 
-    const handleAnswerChange = (e) => {
-        setAnswer(e.target.value);
-    };
+    // const handleAnswerChange = (e) => {
+    //     setAnswer(e.target.value);
+    // };
 
     return (
         <div class="answer">

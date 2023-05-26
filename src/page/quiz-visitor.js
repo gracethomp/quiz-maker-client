@@ -22,9 +22,6 @@ function QuizVisitor() {
 
   return (
     <div class='creator'>
-      {/* <div class='form'>
-        <p class='title field'>{quiz.title}</p>
-      </div> */}
         {quizes.map((post) =>(
           <>
             {post.id === slug && 
@@ -38,14 +35,6 @@ function QuizVisitor() {
                 </>
             }
           </>
-            // <>
-            //     <div class='form'>
-            //         <p class='title field'>{post.title}</p>
-            //     </div>
-            //     {post.questions.map((question) =>(
-            //         <Question title={question.question} answers={question.answers} />
-            //     ))}
-            // </>
         ))}
         <NavigationButton visible={true}/>
     </div>

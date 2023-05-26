@@ -11,9 +11,9 @@ const Question= ({answers, title}) => {
                 <div class="answers">
                 {answers.map((answer) =>(
                     <div class = "answer">
-                        <input type="checkbox" id={answer}/>
-                        <label for={answer}></label>
-                        <p class="answer-text">{answer}</p>
+                        <input type="checkbox" id={answer.answer}/>
+                        <label for={answer.answer}></label>
+                        <p class="answer-text">{answer.answer}</p>
                     </div>
                 ))}
                 </div>

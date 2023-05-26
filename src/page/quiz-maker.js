@@ -54,7 +54,7 @@ function QuizMaker() {
     const handleQuestionsChange = (index, e) => {
         const updatedQuestions = questions.map((question) => {
             if (question.id === index) {
-              return { ...question, question: e.target.value };
+              return { ...question, question: e.target.value};
             }
             return question;
           });
@@ -65,6 +65,22 @@ function QuizMaker() {
             questions: updatedQuestions,
           }));
     };
+
+    const handleAnswers= (newAnswers, index) => {
+        const updatedQuestions = questions.map((question) => {
+            if (question.id === index) {
+              return { ...question, answers: newAnswers};
+            }
+            return question;
+          });
+        
+          setQuestions(updatedQuestions);
+          setFormData((prevFormData) => ({
+            ...prevFormData,
+            questions: updatedQuestions,
+          }));
+
+    }
 
     const handleRemoveQuestions = (index) => {
         const questions = formData.questions.filter(e => e.id !== index);
@@ -79,11 +95,7 @@ function QuizMaker() {
             </div>
             {questions.map(question => (
                 <div key={question.id}>
-                    {/* <div class="question">
-                        <input type="text" id="question1" class="question field" value={question.question} placeholder="Enter your question" required onChange={(e) => handleQuestionsChange(question.id, e)}/>
-                        <div class="underline"/>
-                    </div> */}
-                    <QuestionMaker question1={question.question} onDelete={() => deleteQuestion(question.id)} handleQuestionChange={(e)=> handleQuestionsChange(question.id, e)} />
+                    <QuestionMaker mainIndex={mainIndex} question1={question} onDelete={() => deleteQuestion(question.id)} handleQuestionChange={(e)=> handleQuestionsChange(question.id, e)} handleAnswers={handleAnswers}/>
                 </div>
             ))}
             <div class='plus-question'>
