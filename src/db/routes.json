@@ -1,3 +1,0 @@
-{
-    "/quizes/:quiz-slug" : ":quiz-slug"
-}

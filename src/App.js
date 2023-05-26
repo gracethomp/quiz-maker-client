@@ -3,7 +3,6 @@ import QuizMaker from './page/quiz-maker';
 import QuizVisitor from './page/quiz-visitor';
 import QuizAccess from './page/quiz-access';
 import Result from "./page/results";
-import './App.css';
 
 function App() {
   return (

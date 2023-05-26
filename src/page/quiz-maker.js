@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import QuestionMaker from '../components/maker/question-maker';
 import NavigationButton from '../components/navigation-buttons';
-import plus from './plus.png'
+import plus from '../assets/plus.png'
 
 function QuizMaker() {
     const [mainIndex, setIndex] = useState(0);

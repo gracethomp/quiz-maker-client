@@ -1,6 +1,6 @@
 import React, { useState, useEffect }  from 'react';
 import Answer from './answer-maker';
-import trash from './trash.png';
+import trash from '../../assets/trash.png';
 
 function QuestionMaker({onDelete, question1, handleQuestionChange, mainIndex, handleAnswers}) {
     const [answers, setAnswers] = useState([]);

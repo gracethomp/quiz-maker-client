@@ -8,248 +8,175 @@
           "id": 1,
           "question": "What country has the highest life expectancy?",
           "answers": [
-            "Hong Kong",
-            "Japan",
-            "Switzerland",
-            "Australia"
+            {
+              "id": "Hong Kong",
+              "answer": "Hong Kong"
+            },
+            {
+              "id": "Japan",
+              "answer": "Japan"
+            },
+            {
+              "id": "Switzerland",
+              "answer": "Switzerland"
+            },
+            {
+              "id": "Australia",
+              "answer": "Australia"
+            }
           ]
         },
         {
           "id": 2,
           "question": "Where would you be if you were standing on the Spanish Steps?",
           "answers": [
-            "Rome",
-            "Paris",
-            "London",
-            "New York"
+            {
+              "id": "Rome",
+              "answer": "Rome"
+            },
+            {
+              "id": "Paris",
+              "answer": "Paris"
+            },
+            {
+              "id": "London",
+              "answer": "London"
+            },
+            {
+              "id": "New York",
+              "answer": "New York"
+            }
           ]
         },
         {
           "id": 3,
-          "question": "Which language has the more native speakers: English or Spanish?",
+          "question": "Which language has more native speakers: English or Spanish?",
           "answers": [
-            "Spanish",
-            "English",
-            "Mandarin",
-            "Hindi"
+            {
+              "id": "Spanish",
+              "answer": "Spanish"
+            },
+            {
+              "id": "English",
+              "answer": "English"
+            },
+            {
+              "id": "Mandarin",
+              "answer": "Mandarin"
+            },
+            {
+              "id": "Hindi",
+              "answer": "Hindi"
+            }
           ]
         },
         {
           "id": 4,
           "question": "What is the most common surname in the United States?",
           "answers": [
-            "Smith",
-            "Johnson",
-            "Williams",
-            "Brown"
+            {
+              "id": "Smith",
+              "answer": "Smith"
+            },
+            {
+              "id": "Johnson",
+              "answer": "Johnson"
+            },
+            {
+              "id": "Williams",
+              "answer": "Williams"
+            },
+            {
+              "id": "Brown",
+              "answer": "Brown"
+            }
           ]
         },
         {
           "id": 5,
           "question": "What disease commonly spread on pirate ships?",
           "answers": [
-            "Scurvy",
-            "Malaria",
-            "Cholera",
-            "Typhoid"
+            {
+              "id": "Scurvy",
+              "answer": "Scurvy"
+            },
+            {
+              "id": "Malaria",
+              "answer": "Malaria"
+            },
+            {
+              "id": "Cholera",
+              "answer": "Cholera"
+            },
+            {
+              "id": "Typhoid",
+              "answer": "Typhoid"
+            }
           ]
         },
         {
           "id": 6,
           "question": "Who was the Ancient Greek God of the Sun?",
           "answers": [
-            "Apollo",
-            "Zeus",
-            "Hades",
-            "Poseidon"
+            {
+              "id": "Apollo",
+              "answer": "Apollo"
+            },
+            {
+              "id": "Zeus",
+              "answer": "Zeus"
+            },
+            {
+              "id": "Hades",
+              "answer": "Hades"
+            },
+            {
+              "id": "Poseidon",
+              "answer": "Poseidon"
+            }
           ]
         },
         {
           "id": 7,
           "question": "What was the name of the crime boss who was head of the feared Chicago Outfit?",
           "answers": [
-            "Al Capone",
-            "John Gotti",
-            "Lucky Luciano",
-            "Meyer Lansky"
+            {
+              "id": "Al Capone",
+              "answer": "Al Capone"
+            },
+            {
+              "id": "John Gotti",
+              "answer": "John Gotti"
+            },
+            {
+              "id": "Lucky Luciano",
+              "answer": "Lucky Luciano"
+            },
+            {
+              "id": "Meyer Lansky",
+              "answer": "Meyer Lansky"
+            }
           ]
         },
         {
           "id": 8,
           "question": "What year was the United Nations established?",
           "answers": [
-            "1945",
-            "1919",
-            "1939",
-            "1955"
-          ]
-        },
-        {
-          "id": 9,
-          "question": "Who has won the most total Academy Awards?",
-          "answers": [
-            "Walt Disney",
-            "Katharine Hepburn",
-            "Steven Spielberg",
-            "Meryl Streep"
-          ]
-        },
-        {
-          "question": "What artist has the most streams on Spotify?",
-          "answers": [
-            "Drake",
-            "Ed Sheeran",
-            "Justin Bieber",
-            "Ariana Grande"
-          ]
-        },
-        {
-          "question": "How many minutes are in a full week?",
-          "answers": [
-            "10,080",
-            "5,040",
-            "7,200",
-            "12,960"
-          ]
-        },
-        {
-          "question": "What car manufacturer had the highest revenue in 2020?",
-          "answers": [
-            "Volkswagen",
-            "Toyota",
-            "General Motors",
-            "Hyundai"
-          ]
-        },
-        {
-          "question": "How many elements are in the periodic table?",
-          "answers": [
-            "118",
-            "92",
-            "104",
-            "137"
-          ]
-        },
-        {
-          "question": "What company was originally called 'Cadabra'?",
-          "answers": [
-            "Amazon",
-            "Google",
-            "Apple",
-            "Microsoft"
-          ]
-        },
-        {
-          "question": "How many faces does a Dodecahedron have?",
-          "answers": [
-            "12",
-            "6",
-            "8",
-            "20"
-          ]
-        },
-        {
-          "question": "Queen guitarist Brian May is also an expert in what scientific field?",
-          "answers": [
-            "Astrophysics",
-            "Genetics",
-            "Chemistry",
-            "Geology"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "funny-quiz",
-      "title": "Funny quiz",
-      "questions": [
-        {
-          "id": 1,
-          "question": " How many bones do we have in an ear?",
-          "answers": [
             {
-              "id": 1,
-              "answer": "3"
+              "id": "1945",
+              "answer": "1945"
             },
             {
-              "id": 2,
-              "answer": "4"
+              "id": "1919",
+              "answer": "1919"
             },
             {
-              "id": 3,
-              "answer": "0"
+              "id": "1939",
+              "answer": "1939"
             },
             {
-              "id": 4,
-              "answer": "5"
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "question": "What software company is headquartered in Redmond, Washington?",
-          "answers": [
-            {
-              "id": 1,
-              "answer": "Microsoft"
-            },
-            {
-              "id": 2,
-              "answer": "Epam"
-            },
-            {
-              "id": 3,
-              "answer": "Apple"
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "question": "In what country is the Chernobyl nuclear plant located? ",
-          "answers": [
-            {
-              "id": 1,
-              "answer": "Ukraine"
-            },
-            {
-              "id": 2,
-              "answer": "Slovenia"
-            },
-            {
-              "id": 3,
-              "answer": "Poland"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "poiuygv-",
-      "title": "poiuygv ",
-      "questions": [
-        {
-          "id": 1,
-          "question": "lkjhbnm,.",
-          "answers": [
-            {
-              "id": "",
-              "answer": "kjhgfbnm"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "dsfsdfsdf12",
-      "title": "dsfsdfsdf12",
-      "questions": [
-        {
-          "id": 1,
-          "question": "dsfsdfs",
-          "answers": [
-            {
-              "id": "xOJGdAsTWz",
-              "answer": "31231"
+              "id": "1955",
+              "answer": "1955"
             }
           ]
         }
