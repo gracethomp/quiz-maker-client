@@ -5,20 +5,11 @@ import NavigationButton from '../components/navigation-buttons';
 
 function QuizVisitor() {
   const { slug } = useParams()
-  const [quizes, setQuizes] = useState([]);
+  const [quizzes, setQuizzes] = useState([]);
   const [formData, setFormData] = useState({
     ip: '',
     result: '100'
   });
-
-  const getData = () => {
-    fetch("http://localhost:5000/quizes")
-      .then((response) => response.json())
-      .then((result) => {
-        setQuizes(result);
-        setFormData({ ...formData, ip: result.ip });
-      })
-  };
 
   const handleSubmit = () => {
     fetch('http://localhost:5000/results', {
@@ -31,14 +22,21 @@ function QuizVisitor() {
   }
 
   useEffect(() => {
-    getData();
-  });
+    fetch("http://localhost:3001/quizzes")
+      .then((response) => response.json())
+      .then((result) => {
+        setQuizzes(result);
+        setFormData({ ...formData, ip: result.ip });
+      });
+  }, [formData]);
+
+  const hasMatchingSlug = quizzes.some((post) => post.slug === slug);
 
   return (
     <div class='creator'>
-      {quizes.map((post) => (
+      {quizzes.map((post) => (
         <>
-          {post.id === slug &&
+          {post.slug === slug &&
             <>
               <div class='round-shadow-box-form form'>
                 <p class='title field'>{post.title}</p>
@@ -50,7 +48,7 @@ function QuizVisitor() {
           }
         </>
       ))}
-      <NavigationButton visible={true} handleSubmit={handleSubmit} />
+      <NavigationButton visible={hasMatchingSlug} handleSubmit={handleSubmit} />
     </div>
   );
 };

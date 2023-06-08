@@ -7,7 +7,7 @@ function QuizMaker() {
     const [mainIndex, setIndex] = useState(0);
     const [questions, setQuestions] = useState([]);
     const [formData, setFormData] = useState({
-        id: '',
+        slug: '',
         title: '',
         questions: []
     });
@@ -30,13 +30,13 @@ function QuizMaker() {
         const { value } = e.target;
         let id = value.toLowerCase();
         id = id.replace(/\s/g, "-");
-        setFormData({ ...formData, 'title': value, id: id });
+        setFormData({ ...formData, 'title': value, slug: id });
     };
 
     const handleSubmit = (newQuestion) => {
         setQuestions([...questions, newQuestion]);
         setFormData({ ...formData, questions: [...questions, newQuestion] });
-        fetch('http://localhost:5000/quizes', {
+        fetch('http://localhost:3001/quizzes', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
