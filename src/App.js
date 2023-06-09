@@ -11,7 +11,7 @@ function App() {
         <Route path="/maker" element={<QuizMaker />} />
         <Route path="/:slug" element={<QuizVisitor slug1='random-general-quiz' />} />
         <Route path='/' element={<QuizAccess />} />
-        <Route path='/:slug/results' element={<Result />} />
+        <Route path='/results' element={<Result />} />
       </Routes>
     </BrowserRouter>
   );

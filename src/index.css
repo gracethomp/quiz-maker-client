@@ -85,11 +85,11 @@ input.quiz-slag {
   text-align: center;
 }
 
-input[type="checkbox"] {
+input[type="radio"] {
   display: none;
 }
 
-input[type="checkbox"]:checked+label {
+input[type="radio"]:checked+label {
   background-color: #cccccc;
 }
 
@@ -363,6 +363,7 @@ td {
   border: 1px solid rgb(255, 255, 255);
   text-align: center;
   padding: 8px;
+  word-wrap: break-word;
 }
 
 th {
