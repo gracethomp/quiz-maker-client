@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import QuizMaker from './page/quiz-maker';
-import QuizVisitor from './page/quiz-visitor';
-import QuizAccess from './page/quiz-access';
+import QuizMaker from "./page/quiz-maker";
+import QuizVisitor from "./page/quiz-visitor";
+import QuizAccess from "./page/quiz-access";
 import Result from "./page/results";
 
 function App() {
@@ -9,9 +9,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/maker" element={<QuizMaker />} />
-        <Route path="/:slug" element={<QuizVisitor slug1='random-general-quiz' />} />
-        <Route path='/' element={<QuizAccess />} />
-        <Route path='/results' element={<Result />} />
+        <Route
+          path="/:slug"
+          element={<QuizVisitor slug1="random-general-quiz" />}
+        />
+        <Route path="/" element={<QuizAccess />} />
+        <Route path="/results" element={<Result />} />
       </Routes>
     </BrowserRouter>
   );

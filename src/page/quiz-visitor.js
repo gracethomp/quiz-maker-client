@@ -17,8 +17,12 @@ function QuizVisitor() {
 
   const handleAnswerChange = (question, answer) => {
     setAnswers((prevAnswers) => {
-      const updatedQuestions = { ...prevAnswers, answer: answer, question: question };
-      setFormData({ ...formData, answers: updatedQuestions});
+      const updatedQuestions = {
+        ...prevAnswers,
+        answer: answer,
+        question: question,
+      };
+      setFormData({ ...formData, answers: updatedQuestions });
       return updatedQuestions;
     });
   };
