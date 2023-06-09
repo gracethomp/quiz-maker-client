@@ -21,7 +21,7 @@ function Result() {
         <table class="round-shadow-box-form">
           <tr>
             <th>IP</th>
-            <th>Result</th>
+            <th>Quiz</th>
             <th>Answers</th>
           </tr>
           {results.map((result) => (
